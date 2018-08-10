@@ -18,6 +18,7 @@
 			<Item Name="FileIO" Type="Folder"/>
 			<Item Name="Generators" Type="Folder">
 				<Item Name="sine_source.vi" Type="VI" URL="../sine_source.vi"/>
+				<Item Name="square_source.vi" Type="VI" URL="../square_source.vi"/>
 				<Item Name="triangle_source.vi" Type="VI" URL="../triangle_source.vi"/>
 			</Item>
 			<Item Name="Optimization" Type="Folder">
