@@ -20,6 +20,10 @@
 				<Item Name="sine_source.vi" Type="VI" URL="../sine_source.vi"/>
 				<Item Name="triangle_source.vi" Type="VI" URL="../triangle_source.vi"/>
 			</Item>
+			<Item Name="Optimization" Type="Folder">
+				<Item Name="double_array.lvclass" Type="LVClass" URL="../doubling_array/double_array.lvclass"/>
+				<Item Name="table_doubling.vi" Type="VI" URL="../table_doubling.vi"/>
+			</Item>
 		</Item>
 		<Item Name="Dependencies" Type="Dependencies"/>
 		<Item Name="Build Specifications" Type="Build"/>
