@@ -13,9 +13,22 @@
 		<Item Name="Demo" Type="Folder">
 			<Item Name="test_generator.vi" Type="VI" URL="../test_generator.vi"/>
 		</Item>
+		<Item Name="dll" Type="Folder">
+			<Item Name="bin" Type="Folder">
+				<Item Name="csv_operator.dll" Type="Document" URL="../dll/csv_operator.dll"/>
+			</Item>
+			<Item Name="include" Type="Folder">
+				<Item Name="csv_operator.h" Type="Document" URL="../dll_src/csv_operator.h"/>
+			</Item>
+			<Item Name="src" Type="Folder">
+				<Item Name="csv_operator.c" Type="Document" URL="../dll_src/csv_operator.c"/>
+			</Item>
+		</Item>
 		<Item Name="DMM7510_client" Type="Folder"/>
-		<Item Name="libs" Type="Folder">
-			<Item Name="FileIO" Type="Folder"/>
+		<Item Name="lib" Type="Folder">
+			<Item Name="FileIO" Type="Folder">
+				<Item Name="IO_csv_writer.vi" Type="VI" URL="../IO_csv_writer.vi"/>
+			</Item>
 			<Item Name="Generators" Type="Folder">
 				<Item Name="sine_source.vi" Type="VI" URL="../sine_source.vi"/>
 				<Item Name="square_source.vi" Type="VI" URL="../square_source.vi"/>
