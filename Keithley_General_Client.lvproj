@@ -39,6 +39,11 @@
 				<Item Name="double_array.lvclass" Type="LVClass" URL="../doubling_array/double_array.lvclass"/>
 				<Item Name="table_doubling.vi" Type="VI" URL="../table_doubling.vi"/>
 			</Item>
+			<Item Name="Scan_Technique" Type="Folder">
+				<Item Name="constant_voltage.vi" Type="VI" URL="../scan_technique/constant_voltage.vi"/>
+				<Item Name="cyclic_voltammetry.vi" Type="VI" URL="../scan_technique/cyclic_voltammetry.vi"/>
+				<Item Name="differential_pulse_voltammetry.vi" Type="VI" URL="../scan_technique/differential_pulse_voltammetry.vi"/>
+			</Item>
 		</Item>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
