@@ -5,12 +5,16 @@
 #include <string.h>
 #include <time.h>
 
+// Include and lib files of labview dll functions
+#include "../../Dependencies/extcode.h"
+
 #ifdef __linux
 #include <stdlib.h>
 #endif
 
 #ifdef _WIN32
 #include <Windows.h>
+#pragma comment(lib, "../../Dependencies/labview.lib")
 #endif
 
 #define IN 
@@ -28,7 +32,7 @@
 #define DLL_API extern __declspec(dllimport)
 #endif
 
-// Functions and global variables
+// Functions, structures and global variables
 
 // Misen prime
 const int misen_prime = 1 << 17; // prime 131072
@@ -36,7 +40,7 @@ const int misen_prime = 1 << 17; // prime 131072
 // Get the table size so that labview can pass into an array
 DLL_API int get_table_size(IN char *file_path, IN char *machine_type, OUT unsigned int *arr_size);
 // Load the table from file and truncate into two arrays: reference array and command array
-DLL_API int load_table(IN char *file_path, IN unsigned int str_index, IN unsigned int arr_length, OUT char *SCPI_ref_arr, OUT char *SCPI_str_arr);
+DLL_API int load_table(IN unsigned int arr_length, OUT LStrHandle SCPI_ref_arr, OUT LStrHandle SCPI_str_arr);
 // Search the command
 DLL_API int search_pattern();
 

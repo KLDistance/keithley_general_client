@@ -6,26 +6,96 @@ DLL_API int get_table_size(IN char *file_path, IN char *machine_type, OUT unsign
 {
 	char *LUT_txt_str = NULL;
 	char *specific_txt_str = NULL;
+	unsigned int specific_tmp_file_size = 0;
 	unsigned int ascii_len = 8;
 	unsigned int pattern_index = 0;
 	char *tmp_index = NULL;
+	char *tmp_start = NULL;
 	unsigned int i, j;
 	
 	if (load_LUT_from_file(file_path, &LUT_txt_str)) return -1;
 	pattern_index = rabin_karp_search(LUT_txt_str, machine_type, ascii_len);
 	tmp_index = LUT_txt_str + pattern_index + strlen(machine_type) + 1;
+	tmp_start = tmp_index;
 
 	for (*arr_size = 0; *tmp_index != '!'; tmp_index++) if (*tmp_index == '#') (*arr_size)++;
 
+	// Write specific command into a new tmp file
+	FILE *fp_tmp = NULL;
+	fp_tmp = fopen("tmp_command.ini", "w");
+	if (!fp_tmp)
+	{
+#ifdef _WIN32
+		MessageBox(NULL, "Unable to create a new command tmp file!", "Error", MB_OK);
+#endif
+#ifdef __linux
+		fprintf(stderr, "Unable to create a new command tmp file!\n");
+#endif
+		free(LUT_txt_str);
+		return -1;
+	}
+	specific_tmp_file_size = (unsigned int)(tmp_index - tmp_start - 1);
+	specific_txt_str = (char*)malloc(specific_tmp_file_size);
+	if (!specific_txt_str)
+	{
+#ifdef _WIN32
+		MessageBox(NULL, "Unable to allocate space for file buffer!", "Error", MB_OK);
+#endif
+#ifdef __linux
+		fprintf(stderr, "Unable to allocate space for file buffer!\n");
+#endif
+		fclose(fp_tmp);
+		return -1;
+	}
+	memset(specific_txt_str, 0, specific_tmp_file_size);
+	strncpy(specific_txt_str, tmp_start, specific_tmp_file_size);
+	fwrite(specific_txt_str, specific_tmp_file_size, 1, fp_tmp);
+
+	free(specific_txt_str);
+	free(LUT_txt_str);
+	fclose(fp_tmp);
+
 	return 0;
 }
 
-DLL_API int load_table(IN char *file_path, IN unsigned int str_index, IN unsigned int arr_length, OUT char *SCPI_ref_arr, OUT char *SCPI_str_arr)
+DLL_API int load_table(IN unsigned int arr_length, OUT LStrHandle SCPI_ref_arr, OUT LStrHandle SCPI_str_arr)
 {
+	char *specific_LUT = NULL;
+	char *tmp_forward = NULL;
+	char *tmp_backward = NULL;
+	unsigned int i;
 	
+	if (load_LUT_from_file("tmp_command.ini", &specific_LUT))
+	{
+#ifdef _WIN32
+		MessageBox(NULL, "Unable to open SCPI_LUT file! Please ensure the command file is in valid path.", "Error", MB_OK);
+#endif
+#ifdef __linux
+		fprintf(stderr, "Unable to open SCPI_LUT file! Please ensure the command file is in valid path.\n");
+#endif
+		return -1;
+	}
+	
+	tmp_forward = specific_LUT;
+	tmp_backward = specific_LUT;
+	for (i = 0; i < arr_length; i++)
+	{
+		while (*tmp_forward != '#') tmp_forward++;
+		DSSetHandleSize(SCPI_ref_arr[i], (unsigned int)(tmp_forward - tmp_backward));
+		strncpy(SCPI_ref_arr[i]->str, tmp_backward, (unsigned int)(tmp_forward - tmp_backward));
+		tmp_backward = ++tmp_forward;
+
+		while (*tmp_forward != '%') tmp_forward++;
+		DSSetHandleSize(SCPI_str_arr[i], (unsigned int)(tmp_forward - tmp_backward));
+		strncpy(SCPI_str_arr[i]->str, tmp_backward, (unsigned int)(tmp_forward - tmp_backward));
+		tmp_backward = ++tmp_forward;
+	}
+	free(specific_LUT);
+
 	return 0;
 }
 
+// May not be used later
 DLL_API int search_pattern()
 {
 
@@ -61,10 +131,12 @@ int load_LUT_from_file(IN const char *LUT_file_path, OUT char **LUT_txt_str)
 #ifdef __linux
 		fprintf(stderr, "Unable to allocate space for file buffer.\n");
 #endif
+		fclose(fp_SCPI_LUT);
 		return -1;
 	}
 	memset(*LUT_txt_str, 0, file_size + 4);
 	fread(*LUT_txt_str, file_size, 1, fp_SCPI_LUT);
+	fclose(fp_SCPI_LUT);
 
 	return 0;
 }
