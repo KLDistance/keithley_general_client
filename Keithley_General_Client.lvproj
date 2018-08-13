@@ -50,9 +50,6 @@
 				<Item Name="cyclic_voltammetry.vi" Type="VI" URL="../scan_technique/cyclic_voltammetry.vi"/>
 				<Item Name="differential_pulse_voltammetry.vi" Type="VI" URL="../scan_technique/differential_pulse_voltammetry.vi"/>
 			</Item>
-			<Item Name="SCPI_specifier" Type="Folder">
-				<Item Name="dimension_detect.vi" Type="VI" URL="../scpi_specifier/dimension_detect.vi"/>
-			</Item>
 		</Item>
 		<Item Name="machine_ops" Type="Folder">
 			<Item Name="machine.lvclass" Type="LVClass" URL="../machine_ops/machine.lvclass"/>
