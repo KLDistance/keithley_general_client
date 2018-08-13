@@ -81,13 +81,19 @@ DLL_API int load_table(IN unsigned int arr_length, OUT LStrHandle SCPI_ref_arr, 
 	for (i = 0; i < arr_length; i++)
 	{
 		while (*tmp_forward != '#') tmp_forward++;
-		DSSetHandleSize(SCPI_ref_arr[i], (unsigned int)(tmp_forward - tmp_backward));
-		strncpy(SCPI_ref_arr[i]->str, tmp_backward, (unsigned int)(tmp_forward - tmp_backward));
+		*tmp_forward = '\n';
+		DSSetHandleSize(SCPI_ref_arr[i], (unsigned int)(tmp_forward - tmp_backward) + 1);
+		strncpy(SCPI_ref_arr[i]->str, tmp_backward, (unsigned int)(tmp_forward - tmp_backward) + 1);
 		tmp_backward = ++tmp_forward;
 
-		while (*tmp_forward != '%') tmp_forward++;
-		DSSetHandleSize(SCPI_str_arr[i], (unsigned int)(tmp_forward - tmp_backward));
-		strncpy(SCPI_str_arr[i]->str, tmp_backward, (unsigned int)(tmp_forward - tmp_backward));
+		while (*tmp_forward != '%')
+		{
+			if (*tmp_forward == '&') *tmp_forward = '\n';
+			tmp_forward++;
+		}
+		*tmp_forward = '\n';
+		DSSetHandleSize(SCPI_str_arr[i], (unsigned int)(tmp_forward - tmp_backward) + 1);
+		strncpy(SCPI_str_arr[i]->str, tmp_backward, (unsigned int)(tmp_forward - tmp_backward) + 1);
 		tmp_backward = ++tmp_forward;
 	}
 	free(specific_LUT);

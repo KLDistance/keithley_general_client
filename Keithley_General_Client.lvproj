@@ -10,18 +10,25 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
+		<Item Name="architecture" Type="Folder">
+			<Item Name="Front_panel_architecture.rtf" Type="Document" URL="../architecture/Front_panel_architecture.rtf"/>
+			<Item Name="SCPI_file_architecture.rtf" Type="Document" URL="../architecture/SCPI_file_architecture.rtf"/>
+		</Item>
 		<Item Name="Demo" Type="Folder">
 			<Item Name="test_generator.vi" Type="VI" URL="../test_generator.vi"/>
 		</Item>
 		<Item Name="dll" Type="Folder">
 			<Item Name="bin" Type="Folder">
 				<Item Name="csv_operator.dll" Type="Document" URL="../dll/csv_operator.dll"/>
+				<Item Name="SCPI_LUTs.dll" Type="Document" URL="../dll/SCPI_LUTs.dll"/>
 			</Item>
 			<Item Name="include" Type="Folder">
 				<Item Name="csv_operator.h" Type="Document" URL="../dll_src/csv_operator.h"/>
+				<Item Name="SCPI_LUTs.h" Type="Document" URL="../dll_src/SCPI_LUTs.h"/>
 			</Item>
 			<Item Name="src" Type="Folder">
 				<Item Name="csv_operator.c" Type="Document" URL="../dll_src/csv_operator.c"/>
+				<Item Name="SCPI_LUTs.c" Type="Document" URL="../dll_src/SCPI_LUTs.c"/>
 			</Item>
 		</Item>
 		<Item Name="DMM7510_client" Type="Folder"/>
@@ -43,6 +50,9 @@
 				<Item Name="constant_voltage.vi" Type="VI" URL="../scan_technique/constant_voltage.vi"/>
 				<Item Name="cyclic_voltammetry.vi" Type="VI" URL="../scan_technique/cyclic_voltammetry.vi"/>
 				<Item Name="differential_pulse_voltammetry.vi" Type="VI" URL="../scan_technique/differential_pulse_voltammetry.vi"/>
+			</Item>
+			<Item Name="SCPI_specifier" Type="Folder">
+				<Item Name="dimension_detect.vi" Type="VI" URL="../scpi_specifier/dimension_detect.vi"/>
 			</Item>
 		</Item>
 		<Item Name="Dependencies" Type="Dependencies">
