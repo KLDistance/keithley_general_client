@@ -10,11 +10,7 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
-		<Item Name="architecture" Type="Folder">
-			<Item Name="Front_panel_architecture.rtf" Type="Document" URL="../architecture/Front_panel_architecture.rtf"/>
-			<Item Name="SCPI_file_architecture.rtf" Type="Document" URL="../architecture/SCPI_file_architecture.rtf"/>
-		</Item>
-		<Item Name="Demo" Type="Folder">
+		<Item Name="demo" Type="Folder">
 			<Item Name="test_generator.vi" Type="VI" URL="../test_generator.vi"/>
 		</Item>
 		<Item Name="dll" Type="Folder">
@@ -31,7 +27,10 @@
 				<Item Name="SCPI_LUTs.c" Type="Document" URL="../dll_src/SCPI_LUTs.c"/>
 			</Item>
 		</Item>
-		<Item Name="DMM7510_client" Type="Folder"/>
+		<Item Name="documentation" Type="Folder">
+			<Item Name="Front_panel_architecture.rtf" Type="Document" URL="../documentation/Front_panel_architecture.rtf"/>
+			<Item Name="SCPI_file_architecture.rtf" Type="Document" URL="../documentation/SCPI_file_architecture.rtf"/>
+		</Item>
 		<Item Name="lib" Type="Folder">
 			<Item Name="FileIO" Type="Folder">
 				<Item Name="IO_csv_writer.vi" Type="VI" URL="../IO_csv_writer.vi"/>
@@ -55,6 +54,10 @@
 				<Item Name="dimension_detect.vi" Type="VI" URL="../scpi_specifier/dimension_detect.vi"/>
 			</Item>
 		</Item>
+		<Item Name="machine_ops" Type="Folder">
+			<Item Name="machine.lvclass" Type="LVClass" URL="../machine_ops/machine.lvclass"/>
+		</Item>
+		<Item Name="specific_clients" Type="Folder"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Check if File or Folder Exists.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/libraryn.llb/Check if File or Folder Exists.vi"/>
