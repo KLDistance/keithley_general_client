@@ -34,8 +34,8 @@
 		</Item>
 		<Item Name="lib" Type="Folder">
 			<Item Name="FileIO" Type="Folder">
-				<Item Name="IO_csv_writer.vi" Type="VI" URL="../IO_csv_writer.vi"/>
-				<Item Name="IO_txt_writer.vi" Type="VI" URL="../IO_txt_writer.vi"/>
+				<Item Name="IO_csv_writer.vi" Type="VI" URL="../fileIO/IO_csv_writer.vi"/>
+				<Item Name="IO_txt_writer.vi" Type="VI" URL="../fileIO/IO_txt_writer.vi"/>
 			</Item>
 			<Item Name="Generators" Type="Folder">
 				<Item Name="sine_source.vi" Type="VI" URL="../generators/sine_source.vi"/>
@@ -43,8 +43,8 @@
 				<Item Name="triangle_source.vi" Type="VI" URL="../generators/triangle_source.vi"/>
 			</Item>
 			<Item Name="Optimization" Type="Folder">
-				<Item Name="double_array.lvclass" Type="LVClass" URL="../doubling_array/double_array.lvclass"/>
-				<Item Name="table_doubling.vi" Type="VI" URL="../table_doubling.vi"/>
+				<Item Name="double_array.lvclass" Type="LVClass" URL="../optimization/doubling_array/double_array.lvclass"/>
+				<Item Name="table_doubling.vi" Type="VI" URL="../optimization/table_doubling.vi"/>
 			</Item>
 			<Item Name="Scan_Technique" Type="Folder">
 				<Item Name="choose_technique.vi" Type="VI" URL="../scan_technique/choose_technique.vi"/>
@@ -70,6 +70,7 @@
 				<Item Name="VISA Configure Serial Port (Instr).vi" Type="VI" URL="/&lt;vilib&gt;/Instr/_visa.llb/VISA Configure Serial Port (Instr).vi"/>
 				<Item Name="VISA Configure Serial Port (Serial Instr).vi" Type="VI" URL="/&lt;vilib&gt;/Instr/_visa.llb/VISA Configure Serial Port (Serial Instr).vi"/>
 			</Item>
+			<Item Name="csv_operator.dll" Type="Document" URL="../fileIO/dll/csv_operator.dll"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
