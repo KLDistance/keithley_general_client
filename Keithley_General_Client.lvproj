@@ -10,9 +10,7 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
-		<Item Name="demo" Type="Folder">
-			<Item Name="test_generator.vi" Type="VI" URL="../test_generator.vi"/>
-		</Item>
+		<Item Name="demo" Type="Folder"/>
 		<Item Name="dll" Type="Folder">
 			<Item Name="bin" Type="Folder">
 				<Item Name="csv_operator.dll" Type="Document" URL="../dll/csv_operator.dll"/>
@@ -40,9 +38,9 @@
 				<Item Name="IO_txt_writer.vi" Type="VI" URL="../IO_txt_writer.vi"/>
 			</Item>
 			<Item Name="Generators" Type="Folder">
-				<Item Name="sine_source.vi" Type="VI" URL="../sine_source.vi"/>
-				<Item Name="square_source.vi" Type="VI" URL="../square_source.vi"/>
-				<Item Name="triangle_source.vi" Type="VI" URL="../triangle_source.vi"/>
+				<Item Name="sine_source.vi" Type="VI" URL="../generators/sine_source.vi"/>
+				<Item Name="square_source.vi" Type="VI" URL="../generators/square_source.vi"/>
+				<Item Name="triangle_source.vi" Type="VI" URL="../generators/triangle_source.vi"/>
 			</Item>
 			<Item Name="Optimization" Type="Folder">
 				<Item Name="double_array.lvclass" Type="LVClass" URL="../doubling_array/double_array.lvclass"/>
