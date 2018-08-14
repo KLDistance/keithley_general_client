@@ -49,6 +49,7 @@
 				<Item Name="table_doubling.vi" Type="VI" URL="../table_doubling.vi"/>
 			</Item>
 			<Item Name="Scan_Technique" Type="Folder">
+				<Item Name="choose_technique.vi" Type="VI" URL="../scan_technique/choose_technique.vi"/>
 				<Item Name="constant_voltage.vi" Type="VI" URL="../scan_technique/constant_voltage.vi"/>
 				<Item Name="cyclic_voltammetry.vi" Type="VI" URL="../scan_technique/cyclic_voltammetry.vi"/>
 				<Item Name="differential_pulse_voltammetry.vi" Type="VI" URL="../scan_technique/differential_pulse_voltammetry.vi"/>
