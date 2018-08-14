@@ -28,6 +28,9 @@
 			</Item>
 		</Item>
 		<Item Name="documentation" Type="Folder">
+			<Item Name="class_doc" Type="Folder">
+				<Item Name="class_machine.rtf" Type="Document" URL="../documentation/class_doc/class_machine.rtf"/>
+			</Item>
 			<Item Name="Front_panel_architecture.rtf" Type="Document" URL="../documentation/Front_panel_architecture.rtf"/>
 			<Item Name="SCPI_file_architecture.rtf" Type="Document" URL="../documentation/SCPI_file_architecture.rtf"/>
 		</Item>
@@ -64,6 +67,9 @@
 				<Item Name="NI_FileType.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/lvfile.llb/NI_FileType.lvlib"/>
 				<Item Name="NI_PackedLibraryUtility.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/LVLibp/NI_PackedLibraryUtility.lvlib"/>
 				<Item Name="subDisplayMessage.vi" Type="VI" URL="/&lt;vilib&gt;/express/express output/DisplayMessageBlock.llb/subDisplayMessage.vi"/>
+				<Item Name="VISA Configure Serial Port" Type="VI" URL="/&lt;vilib&gt;/Instr/_visa.llb/VISA Configure Serial Port"/>
+				<Item Name="VISA Configure Serial Port (Instr).vi" Type="VI" URL="/&lt;vilib&gt;/Instr/_visa.llb/VISA Configure Serial Port (Instr).vi"/>
+				<Item Name="VISA Configure Serial Port (Serial Instr).vi" Type="VI" URL="/&lt;vilib&gt;/Instr/_visa.llb/VISA Configure Serial Port (Serial Instr).vi"/>
 			</Item>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>

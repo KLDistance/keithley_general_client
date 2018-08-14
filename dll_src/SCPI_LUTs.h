@@ -57,7 +57,7 @@ int rabin_karp_search(const char *src, const char *pat, int ascii_len);
 Set the file format as follows:
 
 !NI-VISA
-$VISA=6517B
+$MODEL 6517B
 SENS_FUNC_VOLT#:SENS:FUNC 'VOLT'%
 SENS_FUNC_CURR#:SENS:FUNC 'CURR'%
 SENS_FUNC_CURR#:SENS:FUNC 'RES'%
