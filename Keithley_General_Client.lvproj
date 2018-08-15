@@ -28,6 +28,7 @@
 		<Item Name="documentation" Type="Folder">
 			<Item Name="class_doc" Type="Folder">
 				<Item Name="class_machine.rtf" Type="Document" URL="../documentation/class_doc/class_machine.rtf"/>
+				<Item Name="class_technique_parameters.rtf" Type="Document" URL="../documentation/class_doc/class_technique_parameters.rtf"/>
 			</Item>
 			<Item Name="Front_panel_architecture.rtf" Type="Document" URL="../documentation/Front_panel_architecture.rtf"/>
 			<Item Name="SCPI_file_architecture.rtf" Type="Document" URL="../documentation/SCPI_file_architecture.rtf"/>
@@ -51,6 +52,7 @@
 				<Item Name="constant_voltage.vi" Type="VI" URL="../scan_technique/constant_voltage.vi"/>
 				<Item Name="cyclic_voltammetry.vi" Type="VI" URL="../scan_technique/cyclic_voltammetry.vi"/>
 				<Item Name="differential_pulse_voltammetry.vi" Type="VI" URL="../scan_technique/differential_pulse_voltammetry.vi"/>
+				<Item Name="technique_parameters.lvclass" Type="LVClass" URL="../scan_technique/technique_parameters/technique_parameters.lvclass"/>
 			</Item>
 		</Item>
 		<Item Name="machine_ops" Type="Folder">
