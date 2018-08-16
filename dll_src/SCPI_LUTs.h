@@ -35,7 +35,7 @@
 // Functions, structures and global variables
 
 // Misen prime
-const int misen_prime = 1 << 17; // prime 131072
+const int misen_prime = 1 << 17 - 1; // prime 131071
 
 // Get the table size so that labview can pass into an array
 DLL_API int get_table_size(IN char *file_path, IN char *machine_type, OUT unsigned int *arr_size);
