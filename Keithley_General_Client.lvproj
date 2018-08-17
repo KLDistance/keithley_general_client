@@ -35,6 +35,7 @@
 		</Item>
 		<Item Name="lib" Type="Folder">
 			<Item Name="FileIO" Type="Folder">
+				<Item Name="file_interative_manager.vi" Type="VI" URL="../fileIO/file_interative_manager.vi"/>
 				<Item Name="IO_csv_writer.vi" Type="VI" URL="../fileIO/IO_csv_writer.vi"/>
 				<Item Name="IO_txt_writer.vi" Type="VI" URL="../fileIO/IO_txt_writer.vi"/>
 			</Item>
@@ -72,7 +73,6 @@
 				<Item Name="VISA Configure Serial Port (Instr).vi" Type="VI" URL="/&lt;vilib&gt;/Instr/_visa.llb/VISA Configure Serial Port (Instr).vi"/>
 				<Item Name="VISA Configure Serial Port (Serial Instr).vi" Type="VI" URL="/&lt;vilib&gt;/Instr/_visa.llb/VISA Configure Serial Port (Serial Instr).vi"/>
 			</Item>
-			<Item Name="csv_operator.dll" Type="Document" URL="../fileIO/dll/csv_operator.dll"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
