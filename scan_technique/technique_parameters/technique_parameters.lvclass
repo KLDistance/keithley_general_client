@@ -41,13 +41,13 @@
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 	</Item>
 	<Item Name="init_DPV.vi" Type="VI" URL="../init_DPV.vi">
-		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!"A!!!!!A!%!!!!6!$Q!!Q!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"Y!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1!"!!!!!!</Property>
+		<Property Name="NI.ClassItem.ConnectorPane" Type="Bin">&amp;!#!!!!!!!)!"1!&amp;!!!-!%!!!@````]!!!!"!!%!!!'4!!!!$1!01!I!#7FO;82@&gt;G^M&gt;!!01!I!#'6O:&amp;^W&lt;WRU!!!01!I!#7FO9X*@&gt;G^M&gt;!!01!I!#8"V&lt;(.F8W&amp;N=!!21!I!#X"V&lt;(.F8X&gt;J:(2I!".!#A!-=(6M=W6@='6S;7^E!!!21!-!#H&amp;V;76U8X2J&lt;75!!%N!&amp;A!+#G&amp;V&gt;']A=G&amp;O:W5%-55N-11R23US"$&amp;&amp;,4-%-55N.!1R23UV"$&amp;&amp;,49%-55N.Q1R23UY"$&amp;&amp;,4E!#X.F&lt;H.F8X*B&lt;G&gt;F!#R!5!!)!!!!!1!#!!-!"!!&amp;!!9!"R6P&gt;82Q&gt;82@2&amp;"78X"B=G&amp;N:82F=H-!0%"Q!"Y!!"%0&lt;7&amp;D;'FO:3ZM&gt;G.M98.T!#"P&gt;82Q&gt;82@&lt;7&amp;D;'FO:6^S:7:F=G6O9W5O&lt;(:D&lt;'&amp;T=Q!!"!!!!$J!=!!?!!!2$WVB9WBJ&lt;G5O&lt;(:D&lt;'&amp;T=Q!@;7ZQ&gt;82@&lt;7&amp;D;'FO:6^S:7:F=G6O9W5O&lt;(:D&lt;'&amp;T=Q!J!0!!"!!)!!E!#A!,!Q!!+!!!#1!!!!U$!!!!!!!!#!!!"1!%!!!!!!%!$!!!!!!</Property>
 		<Property Name="NI.ClassItem.ExecutionSystem" Type="Int">-1</Property>
-		<Property Name="NI.ClassItem.Flags" Type="Int">0</Property>
+		<Property Name="NI.ClassItem.Flags" Type="Int">1073742080</Property>
 		<Property Name="NI.ClassItem.IsStaticMethod" Type="Bool">true</Property>
 		<Property Name="NI.ClassItem.MethodScope" Type="UInt">2</Property>
 		<Property Name="NI.ClassItem.Priority" Type="Int">1</Property>
-		<Property Name="NI.ClassItem.State" Type="Int">1082130944</Property>
+		<Property Name="NI.ClassItem.State" Type="Int">1107821072</Property>
 		<Property Name="NI.LibItem.Scope" Type="Int">2</Property>
 	</Item>
 </LVClass>
