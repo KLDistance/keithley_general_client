@@ -13,14 +13,17 @@
 		<Item Name="demo" Type="Folder"/>
 		<Item Name="dll" Type="Folder">
 			<Item Name="bin" Type="Folder">
+				<Item Name="command_truncate.dll" Type="Document" URL="../dll/command_truncate.dll"/>
 				<Item Name="csv_operator.dll" Type="Document" URL="../dll/csv_operator.dll"/>
 				<Item Name="SCPI_LUTs.dll" Type="Document" URL="../dll/SCPI_LUTs.dll"/>
 			</Item>
 			<Item Name="include" Type="Folder">
+				<Item Name="command_truncate.h" Type="Document" URL="../dll_src/command_truncate.h"/>
 				<Item Name="csv_operator.h" Type="Document" URL="../dll_src/csv_operator.h"/>
 				<Item Name="SCPI_LUTs.h" Type="Document" URL="../dll_src/SCPI_LUTs.h"/>
 			</Item>
 			<Item Name="src" Type="Folder">
+				<Item Name="command_truncate.c" Type="Document" URL="../dll_src/command_truncate.c"/>
 				<Item Name="csv_operator.c" Type="Document" URL="../dll_src/csv_operator.c"/>
 				<Item Name="SCPI_LUTs.c" Type="Document" URL="../dll_src/SCPI_LUTs.c"/>
 			</Item>
